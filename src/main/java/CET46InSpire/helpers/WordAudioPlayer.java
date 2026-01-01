@@ -15,7 +15,7 @@ public class WordAudioPlayer {
             currentSound.dispose(); // 释放内存
             currentSound = null;
         }
-        String folderPath = "mods/CET46InSpire/audio/"; 
+        String folderPath = "mods/CET46InSpire/UserDictionaries/audio/"; 
         
         FileHandle file = null;
 
