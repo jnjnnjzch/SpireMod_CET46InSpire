@@ -140,7 +140,7 @@ public class QuizScreen extends CustomScreen {
         this.infoTip.show("text");
         this.checkButton.show(TEXT[0]);
         this.replayButton.show("重播"); 
-        this.replayButton.updateWord(this.word);
+        this.replayButton.updateWord(this.word_id);
         for (WordButton w: this.wordButtons) {
             w.reset();
         }

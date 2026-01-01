@@ -11,21 +11,21 @@ public class ReplayButton extends UIButton {
     public static final float IMG_W;
     public static final float IMG_H;
     private static final Color HOVER_BLEND_COLOR;
-    private String wordToPlay = null;
+    private String wordIDToPlay = null;
 
     public ReplayButton(float pos_x, float pos_y) {
         super(pos_x, pos_y, IMG_W, IMG_H);
     }
 
-    public void updateWord(String newWord) {
-        this.wordToPlay = newWord;
+    public void updateWord(String wordId) {
+        this.wordIDToPlay = wordId;
     }
 
     @Override
     public void buttonClicked() {
-        if (this.wordToPlay != null) {
-            // WordAudioPlayer.play(this.wordToPlay);
-            WordAudioPlayer.play("安心");
+        if (this.wordIDToPlay != null) {
+            WordAudioPlayer.playByWordId(this.wordIDToPlay);            
+            // WordAudioPlayer.play("安心");
         }
     }
 
