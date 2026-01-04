@@ -111,7 +111,9 @@ public class JLPTRelic extends QuizRelic {
         List<String> confusingList = new ArrayList<>();
         confusingList.add(kana);
         int size = Math.min(choice_num, request.getMaxOptionNum() - allOptions.size());
-        confusingList.addAll(wrongKanaList.subList(0, size));
+        if (Math.min(size, wrongKanaList.size()) > 0) { //再检测一次越界问题
+            confusingList.addAll(wrongKanaList.subList(0, size));
+        }
         if (confusingList.size() > 1) {
             correctOptions.add(kana);
             Collections.shuffle(confusingList);
